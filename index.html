@@ -12,19 +12,18 @@
         var operacao = prompt('Agora, digite "soma" para adição ou "subtracao" para Subtração: ')
         
         var num2 = parseFloat(prompt('Digite o segundo número: '))
-        var resultado = calcularOperacao(num1, operacao, num2)
+        var resultado = calcularOperacao(num1, num2, operacao)
 
-        function calcularOperacao () {          
+        function calcularOperacao (num1, num2, operacao) {          
             
             if (operacao == 'soma'){
                 resultado = (num1 + num2)
             } 
             else if (operacao == 'subtracao'){
                 resultado = (num1 - num2)
-                return resultado
             }
             else {
-                alert('Operação digitada não existe. Por favor, tente novamente!')
+                alert('Operação digitada não existe! Por favor, tente novamente!')
             }
             return resultado
 
