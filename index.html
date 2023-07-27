@@ -7,18 +7,17 @@
 
     <script>
 
-        var num1 = parseInt(prompt('Digite o primeiro número: '))
+        var num1 = parseFloat(prompt('Digite o primeiro número: '))
         
         var operacao = prompt('Agora, digite "soma" para adição ou "subtracao" para Subtração: ')
         
-        var num2 = parseInt(prompt('Digite o segundo número: '))
+        var num2 = parseFloat(prompt('Digite o segundo número: '))
         var resultado = calcularOperacao(num1, operacao, num2)
 
         function calcularOperacao () {          
             
             if (operacao == 'soma'){
                 resultado = (num1 + num2)
-                return resultado
             } 
             else if (operacao == 'subtracao'){
                 resultado = (num1 - num2)
@@ -27,6 +26,7 @@
             else {
                 alert('Operação digitada não existe. Por favor, tente novamente!')
             }
+            return resultado
 
         }
 
